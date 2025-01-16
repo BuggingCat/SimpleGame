@@ -14,7 +14,7 @@ If you want to **download the entire Unity project**, just clone the branch B an
 I used Unity version 2022.3.42f1c1 to make this game.
 
 ```
-git clone -b B http://github.com/BuggingCat/SimpleGame.git
+git clone -b B https://github.com/BuggingCat/SimpleGame.git
 ```
 
 ## Play this Game
