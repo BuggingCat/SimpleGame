@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
   - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 
@@ -50,9 +50,15 @@ TagManager:
   - name: Ground
     uniqueID: 4130967417
     locked: 0
+  - name: Tile Ground1
+    uniqueID: 1693691255
+    locked: 0
   - name: Enemy
     uniqueID: 913564173
     locked: 0
   - name: Player
     uniqueID: 3805425695
+    locked: 0
+  - name: square
+    uniqueID: 2471783187
     locked: 0

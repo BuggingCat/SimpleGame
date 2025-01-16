@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     //    
     //}
 
-    // 背景Castle的移动速度
+    /*// 背景Castle的移动速度
     public float speed = 1.2f;
 
     // Update is called once per frame
@@ -31,5 +31,33 @@ public class NewBehaviourScript : MonoBehaviour
             // 将修改后的位置赋值给子物体
             tran.position = pos;
         }
+    }*/
+
+    private GameObject cam;
+
+    [SerializeField] private float parallaxEffect;
+
+    private float xPosition;
+    private float length;
+
+    private void Start()
+    {
+        cam = GameObject.Find("Main Camera");
+
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        xPosition = transform.position.x;
+    }
+
+    private void Update()
+    {
+        float distanceMoved = cam.transform.position.x * (1 - parallaxEffect);
+        float distanceToMove = cam.transform.position.x * parallaxEffect;
+
+        transform.position = new Vector3(xPosition + distanceToMove, transform.position.y);
+        
+        if (distanceMoved > xPosition + length)
+            xPosition = xPosition + length;
+        else if (distanceMoved < xPosition - length)
+            xPosition = xPosition - length;
     }
 }
